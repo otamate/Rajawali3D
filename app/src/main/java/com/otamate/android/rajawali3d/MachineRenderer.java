@@ -58,6 +58,6 @@ public class MachineRenderer extends RajawaliRenderer {
     @Override
     public void onRender(final long elapsedTime, final double deltaTime) {
         super.onRender(elapsedTime, deltaTime);
-        mObjectGroup.rotate(Vector3.Axis.Y, 1.0);
+        mObjectGroup.rotate(Vector3.Axis.Y, 0.25);
     }
 }
