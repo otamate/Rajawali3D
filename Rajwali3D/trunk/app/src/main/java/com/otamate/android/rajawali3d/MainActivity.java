@@ -28,22 +28,15 @@ public class MainActivity extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-//Remove title bar
-        //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-//Remove notification bar
+        //Remove notification bar
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-
+        // Hide the status bar.
         View decorView = getWindow().getDecorView();
-// Hide the status bar.
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
-// Remember that you should never show the action bar if the
-// status bar is hidden, so hide that too if necessary.
-        //ActionBar actionBar = getActionBar();
-        //actionBar.hide();
 
         setContentView(R.layout.activity_main);
 
@@ -51,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         surface.setFrameRate(60.0);
         surface.setRenderMode(IRajawaliSurface.RENDERMODE_WHEN_DIRTY);
 
-        // Add mSurface to your root view
+        // Add mSurface to root view
         addContentView(surface, new ActionBar.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT));
 
         //mEarthRenderer = new EarthRenderer(this);
