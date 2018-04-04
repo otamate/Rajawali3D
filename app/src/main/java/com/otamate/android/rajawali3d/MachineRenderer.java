@@ -16,7 +16,7 @@ public class MachineRenderer extends RajawaliRenderer {
     private Object3D mObjectGroup;
     private Animation3D mCameraAnim, mLightAnim;
 
-    public MachineRenderer(Context context) {
+    MachineRenderer(Context context) {
         super(context);
         setFrameRate(60);
     }
@@ -35,7 +35,7 @@ public class MachineRenderer extends RajawaliRenderer {
         //mCamera.setZ(12);
 
         try {
-            LoaderOBJ objParser = new LoaderOBJ(mContext.getResources(), mTextureManager, R.raw.generator2_obj);
+            LoaderOBJ objParser = new LoaderOBJ(mContext.getResources(), mTextureManager, R.raw.generator_obj);
             objParser.parse();
             mObjectGroup = objParser.getParsedObject();
             //mObjectGroup.addLight(mLight);
